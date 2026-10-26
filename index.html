@@ -5,16 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Yamamura Studio</title>
 <meta name="description" content="Apps da Yamamura Studio: BrainGames, jogos educativos para crianças, e Fast Tools, PDF e mais.">
-<link rel="icon" href="fasttools/img/icon.png">
+<link rel="icon" href="img/yamamura-icon.png">
 <style>
 :root{--bg:#f6f5f2;--ink:#22222a;--muted:#5d5b68;--card:#fff;--line:#e4e1da}
-@media (prefers-color-scheme:dark){:root{--bg:#17171c;--ink:#f1efe9;--muted:#b3b0be;--card:#23232b;--line:#34343e}}
+@media (prefers-color-scheme:dark){:root{--bg:#17171c;--ink:#f1efe9;--muted:#b3b0be;--card:#23232b;--line:#34343e}.logo{background:#f6f5f2;border-radius:24px;padding:1rem}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .wrap{max-width:62rem;margin:0 auto;padding:0 1rem}
 header{display:flex;justify-content:flex-end;gap:.4rem;padding:1rem 0;flex-wrap:wrap}
 header button{border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:.35rem .9rem;font:inherit;font-size:.9rem;cursor:pointer}
 header button[aria-pressed=true]{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.logo{display:block;margin:.5rem auto 0;width:min(15rem,60vw);height:auto}
 h1{font-size:clamp(2rem,6vw,3rem);line-height:1.15;margin:1rem 0 .5rem;text-align:center}
 .lead{max-width:38rem;margin:0 auto 2rem;color:var(--muted);text-align:center;font-size:1.1rem}
 .apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.2rem}
@@ -29,6 +30,7 @@ h1{font-size:clamp(2rem,6vw,3rem);line-height:1.15;margin:1rem 0 .5rem;text-alig
 .bg{--c:#2e7d57;--cc:#fff}
 .ft{--c:#8a6d00;--cc:#fff}
 @media (prefers-color-scheme:dark){.bg{--c:#47c78c;--cc:#10241a}.ft{--c:#ffd60a;--cc:#1b1b1b}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 footer{text-align:center;color:var(--muted);font-size:.92rem;padding:3rem 0 2.5rem}
 </style>
 </head>
@@ -37,7 +39,8 @@ footer{text-align:center;color:var(--muted);font-size:.92rem;padding:3rem 0 2.5r
 <header role="group" aria-label="Language">
 <button data-l="pt">Português</button><button data-l="en">English</button><button data-l="es">Español</button><button data-l="ja">日本語</button>
 </header>
-<h1>Yamamura Studio</h1>
+<img class="logo" src="img/yamamura-logo.png" alt="Yamamura Studio" width="475" height="512">
+<h1 class="sr">Yamamura Studio</h1>
 <p class="lead" data-t="lead"></p>
 <main class="apps">
 <a class="app bg" href="braingames/">
