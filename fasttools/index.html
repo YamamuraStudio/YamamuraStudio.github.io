@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fast Tools: PDF &amp; MORE</title>
+<meta name="description" content="Leitor de PDF e Word, conversor, unir e separar PDFs, extrator de texto, boleto e Pix. Tudo no aparelho.">
+<link rel="icon" href="img/icon.png">
+<style>
+:root{--bg:#fffdf3;--ink:#1b1b1b;--muted:#5f6368;--card:#fff;--brand:#ffd60a;--brand-ink:#1b1b1b;--line:#ece3b8}
+@media (prefers-color-scheme:dark){:root{--bg:#121212;--ink:#ececec;--muted:#a0a4a8;--card:#1d1d1d;--line:#33300f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1rem}
+header{display:flex;justify-content:flex-end;gap:.4rem;padding:1rem 0;flex-wrap:wrap}
+header button{border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:.35rem .9rem;font:inherit;font-size:.9rem;cursor:pointer}
+header button[aria-pressed=true]{border-color:var(--brand);background:var(--brand);color:var(--brand-ink)}
+.hero{text-align:center;padding:1rem 0 2.5rem}
+.hero img.icon{width:112px;height:112px;border-radius:26px;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.15;margin:1rem 0 .5rem}
+.lead{max-width:38rem;margin:0 auto 1.5rem;color:var(--muted);font-size:1.15rem}
+.cta{display:inline-block;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:700;padding:.9rem 1.8rem;border-radius:999px;font-size:1.1rem;box-shadow:0 4px 0 rgba(0,0,0,.18)}
+h2{font-size:1.7rem;margin:3rem 0 1rem;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem}
+.card{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:1.2rem 1.3rem}
+.card .e{font-size:2rem}
+.card h3{margin:.3rem 0;font-size:1.15rem}
+.card p{margin:0;color:var(--muted);font-size:.97rem}
+.shots{display:flex;gap:1rem;overflow-x:auto;padding:.5rem .2rem 1rem;scroll-snap-type:x mandatory}
+.shots img{height:30rem;width:auto;border-radius:18px;scroll-snap-align:center;box-shadow:0 6px 20px rgba(0,0,0,.2);flex:none}
+.safe{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:1.4rem 1.6rem}
+.safe ul{margin:.5rem 0 0;padding-left:1.2rem;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.92rem;padding:3rem 0 2.5rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header role="group" aria-label="Language">
+<button data-l="pt">Português</button><button data-l="en">English</button>
+</header>
+
+<section class="hero">
+<img class="icon" src="img/icon.png" alt="Fast Tools">
+<h1>Fast Tools: PDF &amp; MORE</h1>
+<p class="lead" data-t="lead"></p>
+<a class="cta" href="https://play.google.com/store/apps/details?id=com.kimurashin.fasttools" data-t="cta"></a>
+</section>
+
+<section>
+<h2 data-t="toolsH"></h2>
+<div class="grid">
+<div class="card"><div class="e">📖</div><h3 data-t="c1h"></h3><p data-t="c1p"></p></div>
+<div class="card"><div class="e">🔄</div><h3 data-t="c2h"></h3><p data-t="c2p"></p></div>
+<div class="card"><div class="e">🧩</div><h3 data-t="c3h"></h3><p data-t="c3p"></p></div>
+<div class="card"><div class="e">📝</div><h3 data-t="c4h"></h3><p data-t="c4p"></p></div>
+<div class="card"><div class="e">▥</div><h3 data-t="c5h"></h3><p data-t="c5p"></p></div>
+<div class="card"><div class="e">💸</div><h3 data-t="c6h"></h3><p data-t="c6p"></p></div>
+</div>
+</section>
+
+<section>
+<h2 data-t="shotsH"></h2>
+<div class="shots">
+<img loading="lazy" src="img/shot-1.jpg" alt="Fast Tools 1"><img loading="lazy" src="img/shot-2.jpg" alt="Fast Tools 2"><img loading="lazy" src="img/shot-3.jpg" alt="Fast Tools 3"><img loading="lazy" src="img/shot-4.jpg" alt="Fast Tools 4"><img loading="lazy" src="img/shot-5.jpg" alt="Fast Tools 5"><img loading="lazy" src="img/shot-6.jpg" alt="Fast Tools 6">
+</div>
+</section>
+
+<section>
+<h2 data-t="safeH"></h2>
+<div class="safe"><ul>
+<li data-t="s1"></li><li data-t="s2"></li><li data-t="s3"></li><li data-t="s4"></li>
+</ul></div>
+</section>
+
+<footer>
+<a href="../" data-t="home"></a> · <a href="../fasttools-privacy/" data-t="priv"></a>
+<p>© Yamamura Studio</p>
+</footer>
+</div>
+
+<script>
+var T={
+pt:{lead:"Todas as suas ferramentas de PDF e documentos em um só lugar, rápidas e simples. Seus arquivos são processados no aparelho.",cta:"Baixar no Google Play",toolsH:"Ferramentas",
+c1h:"Leitor",c1p:"Abra PDF, Word, TXT, Markdown, ODT e RTF. PDF com zoom e modo noturno; o Modo Fast ajusta o texto à tela.",
+c2h:"Conversor",c2p:"Documento para PDF, PDF para Word, PDF para TXT e imagens para PDF.",
+c3h:"Unir e quebrar PDF",c3p:"Combine vários arquivos em um ou separe páginas e intervalos.",
+c4h:"Extrator de texto",c4p:"Transforme um PDF em texto puro.",
+c5h:"Código de barras",c5p:"Leia EAN, Code 128, ITF e outros.",
+c6h:"Boleto e Pix",c6p:"Confira boletos e contas de consumo e valide o Pix copia e cola.",
+shotsH:"Conheça o app",safeH:"Privacidade",
+s1:"Seus arquivos nunca vão para um servidor.",s2:"Não pede cadastro nem login.",s3:"Gratuito com anúncios; uma compra única e vitalícia remove os banners.",s4:"A internet é usada só para anúncios e para a compra.",home:"Todos os apps",priv:"Política de Privacidade"},
+en:{lead:"All your PDF and document tools in one quick, simple app. Your files are processed on your device.",cta:"Get it on Google Play",toolsH:"Tools",
+c1h:"Reader",c1p:"Open PDF, Word, TXT, Markdown, ODT and RTF. PDFs get zoom and night mode; Fast Mode pages text to your screen.",
+c2h:"Converter",c2p:"Document to PDF, PDF to Word, PDF to TXT and images to PDF.",
+c3h:"Merge and split PDF",c3p:"Combine several files into one or separate pages and ranges.",
+c4h:"Text extractor",c4p:"Turn a PDF into plain text.",
+c5h:"Barcode",c5p:"Read EAN, Code 128, ITF and more.",
+c6h:"Boleto and PIX",c6p:"Check Brazilian boletos and utility bills and validate PIX copy-and-paste codes.",
+shotsH:"See the app",safeH:"Privacy",
+s1:"Your files never go to a server.",s2:"No sign-up or login.",s3:"Free with ads; a one-time lifetime purchase removes banners.",s4:"The internet is used only for ads and the purchase.",home:"All apps",priv:"Privacy Policy"}
+};
+var tags={pt:"pt-BR",en:"en"};
+function pick(){var s="";try{s=localStorage.getItem("l")||""}catch(e){}
+if(T[s])return s;return (navigator.language||"en").slice(0,2)==="pt"?"pt":"en"}
+function set(l){try{localStorage.setItem("l",l)}catch(e){}
+document.documentElement.lang=tags[l];
+document.querySelectorAll("[data-t]").forEach(function(e){e.textContent=T[l][e.dataset.t]});
+document.querySelectorAll("header button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.l===l)})}
+document.querySelectorAll("header button").forEach(function(b){b.onclick=function(){set(b.dataset.l)}});
+set(pick());
+</script>
+</body>
+</html>

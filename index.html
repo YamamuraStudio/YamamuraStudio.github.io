@@ -3,36 +3,32 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BrainGames: Aprenda Brincando</title>
-<meta name="description" content="Jogos educativos para crianças a partir de 3 anos, com o Professor Panda. Funciona sem internet.">
-<link rel="icon" href="img/icon.png">
+<title>Yamamura Studio</title>
+<meta name="description" content="Apps da Yamamura Studio: BrainGames, jogos educativos para crianças, e Fast Tools, PDF e mais.">
+<link rel="icon" href="fasttools/img/icon.png">
 <style>
-:root{--bg:#fff8ec;--ink:#2b2a33;--muted:#5d5b68;--card:#fff;--brand:#2e9e6b;--brand-ink:#fff;--line:#f0e3cb}
-@media (prefers-color-scheme:dark){:root{--bg:#1c1b22;--ink:#f4f1ea;--muted:#b9b5c4;--card:#27262f;--brand:#47c78c;--brand-ink:#10241a;--line:#383644}}
+:root{--bg:#f6f5f2;--ink:#22222a;--muted:#5d5b68;--card:#fff;--line:#e4e1da}
+@media (prefers-color-scheme:dark){:root{--bg:#17171c;--ink:#f1efe9;--muted:#b3b0be;--card:#23232b;--line:#34343e}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-a{color:inherit}
 .wrap{max-width:62rem;margin:0 auto;padding:0 1rem}
 header{display:flex;justify-content:flex-end;gap:.4rem;padding:1rem 0;flex-wrap:wrap}
 header button{border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:.35rem .9rem;font:inherit;font-size:.9rem;cursor:pointer}
-header button[aria-pressed=true]{border-color:var(--brand);background:var(--brand);color:var(--brand-ink)}
-.hero{text-align:center;padding:1rem 0 2.5rem}
-.hero img.icon{width:112px;height:112px;border-radius:26px;box-shadow:0 8px 24px rgba(0,0,0,.18)}
-h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.15;margin:1rem 0 .5rem}
-.lead{max-width:38rem;margin:0 auto 1.5rem;color:var(--muted);font-size:1.15rem}
-.cta{display:inline-block;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:700;padding:.9rem 1.8rem;border-radius:999px;font-size:1.1rem;box-shadow:0 4px 0 rgba(0,0,0,.18)}
-.cta:hover{filter:brightness(1.05)}
-.feature{width:100%;max-width:46rem;border-radius:22px;margin-top:2rem;box-shadow:0 10px 30px rgba(0,0,0,.15)}
-h2{font-size:1.7rem;margin:3rem 0 1rem;text-align:center}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem}
-.card{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:1.2rem 1.3rem}
-.card .e{font-size:2rem}
-.card h3{margin:.3rem 0;font-size:1.15rem}
-.card p{margin:0;color:var(--muted);font-size:.97rem}
-.shots{display:flex;gap:1rem;overflow-x:auto;padding:.5rem .2rem 1rem;scroll-snap-type:x mandatory}
-.shots img{height:30rem;width:auto;border-radius:18px;scroll-snap-align:center;box-shadow:0 6px 20px rgba(0,0,0,.18);flex:none}
-.safe{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:1.4rem 1.6rem}
-.safe ul{margin:.5rem 0 0;padding-left:1.2rem;color:var(--muted)}
+header button[aria-pressed=true]{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+h1{font-size:clamp(2rem,6vw,3rem);line-height:1.15;margin:1rem 0 .5rem;text-align:center}
+.lead{max-width:38rem;margin:0 auto 2rem;color:var(--muted);text-align:center;font-size:1.1rem}
+.apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.2rem}
+.app{display:flex;flex-direction:column;background:var(--card);border:2px solid var(--line);border-radius:24px;padding:1.6rem;text-decoration:none;color:inherit;transition:transform .15s,border-color .15s}
+.app:hover,.app:focus-visible{transform:translateY(-3px);border-color:var(--c)}
+.app img{width:96px;height:96px;border-radius:22px;box-shadow:0 6px 18px rgba(0,0,0,.2)}
+.app h2{margin:1rem 0 .2rem;font-size:1.5rem}
+.app .tag{margin:0 0 .8rem;font-weight:600;color:var(--c)}
+.app p{margin:0 0 1.2rem;color:var(--muted)}
+.app p.tag{color:var(--c)}
+.app .go{margin-top:auto;align-self:flex-start;background:var(--c);color:var(--cc);font-weight:700;padding:.65rem 1.4rem;border-radius:999px}
+.bg{--c:#2e7d57;--cc:#fff}
+.ft{--c:#8a6d00;--cc:#fff}
+@media (prefers-color-scheme:dark){.bg{--c:#47c78c;--cc:#10241a}.ft{--c:#ffd60a;--cc:#1b1b1b}}
 footer{text-align:center;color:var(--muted);font-size:.92rem;padding:3rem 0 2.5rem}
 </style>
 </head>
@@ -41,83 +37,26 @@ footer{text-align:center;color:var(--muted);font-size:.92rem;padding:3rem 0 2.5r
 <header role="group" aria-label="Language">
 <button data-l="pt">Português</button><button data-l="en">English</button><button data-l="es">Español</button><button data-l="ja">日本語</button>
 </header>
-
-<section class="hero">
-<img class="icon" src="img/icon.png" alt="BrainGames">
-<h1 data-t="title"></h1>
+<h1>Yamamura Studio</h1>
 <p class="lead" data-t="lead"></p>
-<a class="cta" href="https://play.google.com/store/apps/details?id=com.kimurashin.braingames" data-t="cta"></a><br>
-<img class="feature" src="img/feature.jpg" alt="Professor Panda">
-</section>
-
-<section>
-<h2 data-t="learnH"></h2>
-<div class="grid">
-<div class="card"><div class="e">🔤</div><h3 data-t="c1h"></h3><p data-t="c1p"></p></div>
-<div class="card"><div class="e">🎨</div><h3 data-t="c2h"></h3><p data-t="c2p"></p></div>
-<div class="card"><div class="e">🌍</div><h3 data-t="c3h"></h3><p data-t="c3p"></p></div>
-<div class="card"><div class="e">🗣️</div><h3 data-t="c4h"></h3><p data-t="c4p"></p></div>
-<div class="card"><div class="e">🎈</div><h3 data-t="c5h"></h3><p data-t="c5p"></p></div>
-<div class="card"><div class="e">🐼</div><h3 data-t="c6h"></h3><p data-t="c6p"></p></div>
+<main class="apps">
+<a class="app bg" href="braingames/">
+<img src="braingames/img/icon.png" alt="BrainGames">
+<h2>BrainGames</h2><p class="tag" data-t="bgTag"></p><p data-t="bgP"></p><span class="go" data-t="more"></span>
+</a>
+<a class="app ft" href="fasttools/">
+<img src="fasttools/img/icon.png" alt="Fast Tools">
+<h2>Fast Tools: PDF &amp; MORE</h2><p class="tag" data-t="ftTag"></p><p data-t="ftP"></p><span class="go" data-t="more"></span>
+</a>
+</main>
+<footer><p>© Yamamura Studio</p></footer>
 </div>
-</section>
-
-<section>
-<h2 data-t="shotsH"></h2>
-<div class="shots" id="shots"></div>
-</section>
-
-<section>
-<h2 data-t="safeH"></h2>
-<div class="safe"><ul>
-<li data-t="s1"></li><li data-t="s2"></li><li data-t="s3"></li><li data-t="s4"></li>
-</ul></div>
-</section>
-
-<footer>
-<a href="braingames-privacy/" data-t="priv"></a>
-<p>© Yamamura Studio</p>
-</footer>
-</div>
-
 <script>
 var T={
-pt:{title:"BrainGames: Aprenda Brincando",lead:"Jogos educativos para crianças a partir de 3 anos. Com o Professor Panda, a criança aprende letras, números, cores e formas brincando, no ritmo dela.",cta:"Baixar no Google Play",learnH:"Aprender é brincar",
-c1h:"Letras e números",c1p:"O alfabeto de A a Z, com cada letra falada, e os números de 1 a 100.",
-c2h:"Cores e formas",c2p:"Círculo, quadrado, triângulo, estrela, coração e todas as cores.",
-c3h:"Palavras e lugares",c3p:"Objetos do dia a dia, lugares e as bandeiras de 100 países.",
-c4h:"Quatro idiomas",c4p:"Português, inglês, espanhol e japonês, com troca dentro do app.",
-c5h:"Hora de brincar",c5p:"Quem estuda um pouco abre jogos só de diversão, como estourar balões.",
-c6h:"Professor Panda",c6p:"Fala tudo em voz alta e incentiva sempre. Errar nunca é algo negativo.",
-shotsH:"Conheça o app",safeH:"Segurança e privacidade",
-s1:"Funciona sem internet e não pede cadastro.",s2:"O progresso fica só no aparelho.",s3:"Anúncios adequados para crianças, nunca durante as perguntas.",s4:"Área dos responsáveis protegida por uma pergunta de adulto.",priv:"Política de Privacidade"},
-en:{title:"BrainGames: Learn by Playing",lead:"Educational games for kids ages 3 and up. With Professor Panda, children learn letters, numbers, colors and shapes by playing, at their own pace.",cta:"Get it on Google Play",learnH:"Learning is play",
-c1h:"Letters and numbers",c1p:"The alphabet from A to Z with every letter spoken aloud, and numbers 1 to 100.",
-c2h:"Colors and shapes",c2p:"Circle, square, triangle, star, heart and all the colors.",
-c3h:"Words and places",c3p:"Everyday objects, places and the flags of 100 countries.",
-c4h:"Four languages",c4p:"Portuguese, English, Spanish and Japanese, switchable inside the app.",
-c5h:"Play time",c5p:"A little studying unlocks fun-only games, like popping balloons.",
-c6h:"Professor Panda",c6p:"Speaks everything aloud and always cheers on. A mistake is never negative.",
-shotsH:"See the app",safeH:"Safety and privacy",
-s1:"Works offline and needs no sign-up.",s2:"Progress stays on the device only.",s3:"Child-appropriate ads, never during questions.",s4:"A grown-ups area protected by an adult-only question.",priv:"Privacy Policy"},
-es:{title:"BrainGames: Aprende Jugando",lead:"Juegos educativos para niños desde los 3 años. Con el Profesor Panda, aprenden letras, números, colores y formas jugando, a su ritmo.",cta:"Descargar en Google Play",learnH:"Aprender es jugar",
-c1h:"Letras y números",c1p:"El abecedario de la A a la Z, con cada letra hablada, y los números del 1 al 100.",
-c2h:"Colores y formas",c2p:"Círculo, cuadrado, triángulo, estrella, corazón y todos los colores.",
-c3h:"Palabras y lugares",c3p:"Objetos cotidianos, lugares y las banderas de 100 países.",
-c4h:"Cuatro idiomas",c4p:"Portugués, inglés, español y japonés, con cambio dentro de la app.",
-c5h:"Hora de jugar",c5p:"Estudiar un poco abre juegos solo de diversión, como reventar globos.",
-c6h:"Profesor Panda",c6p:"Habla todo en voz alta y siempre anima. Equivocarse nunca es algo negativo.",
-shotsH:"Conoce la app",safeH:"Seguridad y privacidad",
-s1:"Funciona sin internet y no pide registro.",s2:"El progreso queda solo en el dispositivo.",s3:"Anuncios adecuados para niños, nunca durante las preguntas.",s4:"Área para adultos protegida por una pregunta que solo un adulto responde.",priv:"Política de Privacidad"},
-ja:{title:"BrainGames: あそんでまなぼう",lead:"3歳からの知育ゲーム。パンダせんせいといっしょに、数字・アルファベット・色・形を自分のペースで楽しく学べます。",cta:"Google Play で入手",learnH:"まなぶことは、あそぶこと",
-c1h:"もじと数字",c1p:"AからZまでのアルファベットを読み上げ、1から100までの数字も学べます。",
-c2h:"色と形",c2p:"まる、しかく、さんかく、ほし、ハート、いろいろな色。",
-c3h:"ことばと場所",c3p:"身のまわりのもの、場所、100か国の国旗。",
-c4h:"4つの言語",c4p:"日本語・英語・スペイン語・ポルトガル語をアプリ内で切り替えられます。",
-c5h:"あそびの時間",c5p:"少し学ぶと、風船わりなどの遊びだけのゲームが開きます。",
-c6h:"パンダせんせい",c6p:"すべて声で読み上げ、いつも応援。まちがえても大丈夫。",
-shotsH:"アプリを見る",safeH:"安全とプライバシー",
-s1:"オフラインで使え、登録は不要です。",s2:"進み具合は端末の中だけに保存されます。",s3:"子ども向けの広告のみ。問題の最中には出ません。",s4:"保護者エリアは大人だけが答えられる質問で守られています。",priv:"プライバシーポリシー"}
+pt:{lead:"Escolha um app para conhecer.",bgTag:"Para crianças a partir de 3 anos",bgP:"Jogos educativos com o Professor Panda: letras, números, cores e formas, sem internet e sem cadastro.",ftTag:"PDF, documentos, boleto e Pix",ftP:"Leia PDF e Word, converta, una e separe PDFs, extraia texto e leia boletos e Pix. Tudo no seu aparelho.",more:"Conhecer o app"},
+en:{lead:"Pick an app to find out more.",bgTag:"For kids ages 3 and up",bgP:"Educational games with Professor Panda: letters, numbers, colors and shapes, offline and with no sign-up.",ftTag:"PDF, documents, boletos and PIX",ftP:"Read PDF and Word, convert, merge and split PDFs, extract text and read boletos and PIX. All on your device.",more:"Learn more"},
+es:{lead:"Elige una app para conocerla.",bgTag:"Para niños desde los 3 años",bgP:"Juegos educativos con el Profesor Panda: letras, números, colores y formas, sin internet y sin registro.",ftTag:"PDF, documentos, boleto y PIX",ftP:"Lee PDF y Word, convierte, une y separa PDFs, extrae texto y lee boletos y PIX. Todo en tu dispositivo.",more:"Conocer la app"},
+ja:{lead:"アプリを選んでください。",bgTag:"3歳からのお子さま向け",bgP:"パンダせんせいと学ぶ知育ゲーム。文字・数字・色・形を、オフラインで登録なしで楽しめます。",ftTag:"PDF・書類・ブラジルの請求書とPIX",ftP:"PDFとWordの閲覧、変換、結合、分割、テキスト抽出。すべて端末内で処理します。",more:"くわしく見る"}
 };
 var tags={pt:"pt-BR",en:"en",es:"es",ja:"ja"};
 function pick(){var s="";try{s=localStorage.getItem("l")||""}catch(e){}
@@ -125,10 +64,7 @@ if(T[s])return s;var n=(navigator.language||"en").slice(0,2);return T[n]?n:"en"}
 function set(l){try{localStorage.setItem("l",l)}catch(e){}
 document.documentElement.lang=tags[l];
 document.querySelectorAll("[data-t]").forEach(function(e){e.textContent=T[l][e.dataset.t]});
-document.title=T[l].title;
-document.querySelectorAll("header button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.l===l)});
-var h="";for(var i=1;i<=4;i++)h+='<img loading="lazy" src="img/'+l+'-'+i+'.jpg" alt="'+T[l].title+' '+i+'">';
-document.getElementById("shots").innerHTML=h}
+document.querySelectorAll("header button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.l===l)})}
 document.querySelectorAll("header button").forEach(function(b){b.onclick=function(){set(b.dataset.l)}});
 set(pick());
 </script>
